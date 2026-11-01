@@ -1,0 +1,13 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=Vier
+GenericName=Four in a Row
+Comment=Line up four discs before the computer or a friend does
+Exec=vier-desktop
+Icon=vier-desktop
+Terminal=false
+Categories=Game;BoardGame;
+Keywords=connect;four;row;board;game;
+StartupNotify=true
+StartupWMClass=vier-desktop

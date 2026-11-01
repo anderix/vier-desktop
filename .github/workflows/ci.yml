@@ -1,0 +1,8 @@
+name: ci
+
+on:
+  workflow_dispatch:
+
+jobs:
+  ci:
+    uses: excelano/.github/.github/workflows/rust-ci.yml@main
