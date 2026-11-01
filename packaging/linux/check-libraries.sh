@@ -6,7 +6,7 @@ set -eu
 root=$(CDPATH= cd -- "$(dirname -- "$0")/../.." && pwd)
 target_dir=$(cd "$root" && cargo metadata --format-version 1 --no-deps |
     sed -n 's/.*"target_directory":"\([^"]*\)".*/\1/p')
-binary="${1:-${target_dir}/release/vier-desktop}"
+binary="${1:-${target_dir}/release/vier}"
 [ -x "$binary" ] || { echo "check-libraries.sh: no executable at $binary; run cargo build --release first" >&2; exit 1; }
 
 stage=$(mktemp -d)

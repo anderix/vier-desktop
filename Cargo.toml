@@ -1,5 +1,5 @@
 [package]
-name = "vier-desktop"
+name = "vier"
 version = "0.1.0"
 edition = "2024"
 rust-version = "1.95"
@@ -28,7 +28,7 @@ Vier is four in a row on a seven-by-six board. Play red against the computer \
 at Easy, Medium or Hard, or pass the mouse between two players. It makes no \
 network connection and keeps only its settings and the game in progress."""
 assets = [
-    ["target/release/vier-desktop", "usr/bin/", "755"],
-    ["packaging/linux/vier-desktop.desktop", "usr/share/applications/", "644"],
-    ["packaging/linux/vier-desktop.svg", "usr/share/icons/hicolor/scalable/apps/", "644"],
+    ["target/release/vier", "usr/bin/", "755"],
+    ["packaging/linux/vier.desktop", "usr/share/applications/", "644"],
+    ["packaging/linux/vier.svg", "usr/share/icons/hicolor/scalable/apps/", "644"],
 ]

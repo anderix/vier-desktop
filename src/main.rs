@@ -19,7 +19,7 @@ use engine::Difficulty;
 use game::{Game, Mode, Phase};
 use palette::{DISC_RED, QUIET_GRAY, SEGMENT_SELECTED, SEGMENT_TRACK, disc_color};
 
-const APP_ID: &str = "vier-desktop";
+const APP_ID: &str = "vier";
 const RESULT_DELAY_SECONDS: f64 = 1.0;
 
 fn main() -> eframe::Result {

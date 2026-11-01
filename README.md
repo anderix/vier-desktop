@@ -9,7 +9,7 @@ It is the desktop sibling of [Vier for iPhone and Apple Watch](https://github.co
 On Debian and Ubuntu (amd64), from the Excelano apt repository:
 
 ```
-curl -fsSL https://excelano.com/apt/setup.sh | sudo sh && sudo apt install vier-desktop
+curl -fsSL https://excelano.com/apt/setup.sh | sudo sh && sudo apt install vier
 ```
 
 That installs the game and a launcher named Vier.
@@ -24,7 +24,7 @@ Easy, Medium and Hard set how far ahead the computer looks and how often it play
 
 `cargo build --release` builds the window, and `cargo test` runs the rules and opponent tests, which need no display. `cargo deb` builds the package. `packaging/linux/check-libraries.sh` runs the release build under Wayland and X11 and refuses if a library it opens is not reachable from the package's `depends`, since the display stack is opened by name at run time and the linker never sees it.
 
-The game keeps its state in `$XDG_STATE_HOME/vier-desktop/state.json`, which is `~/.local/state/vier-desktop/state.json` by default: the chosen difficulty, whether one or two players are at the board, who moves first next, and the game in progress.
+The game keeps its state in `$XDG_STATE_HOME/vier/state.json`, which is `~/.local/state/vier/state.json` by default: the chosen difficulty, whether one or two players are at the board, who moves first next, and the game in progress.
 
 ## License
 
