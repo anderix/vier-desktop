@@ -25,7 +25,3 @@ Easy, Medium and Hard set how far ahead the computer looks and how often it play
 `cargo build --release` builds the window, and `cargo test` runs the rules and opponent tests, which need no display. `cargo deb` builds the package. `packaging/linux/check-libraries.sh` runs the release build under Wayland and X11 and refuses if a library it opens is not reachable from the package's `depends`, since the display stack is opened by name at run time and the linker never sees it.
 
 The game keeps its state in `$XDG_STATE_HOME/vier/state.json`, which is `~/.local/state/vier/state.json` by default: the chosen difficulty, whether one or two players are at the board, who moves first next, and the game in progress.
-
-## License
-
-MIT. See [LICENSE](LICENSE).

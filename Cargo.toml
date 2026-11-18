@@ -5,7 +5,6 @@ edition = "2024"
 rust-version = "1.95"
 description = "Four in a row against the computer or a second player"
 authors = ["David M. Anderson"]
-license = "MIT"
 repository = "https://github.com/excelano/vier-desktop"
 publish = false
 
