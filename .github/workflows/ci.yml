@@ -5,4 +5,4 @@ on:
 
 jobs:
   ci:
-    uses: excelano/.github/.github/workflows/rust-ci.yml@main
+    uses: anderix/.github/.github/workflows/rust-ci.yml@main

@@ -2,7 +2,7 @@
 
 Vier is four in a row for the Linux desktop: drop red discs into a seven-by-six board against yellow, and line up four across, down or diagonally first. The opponent is the computer, or a second person at the same keyboard. Vier has no account, no network, no ads and no analytics. It picks up the game in progress where it was left, and has an Easy level built for beginners.
 
-It is the desktop sibling of [Vier for iPhone and Apple Watch](https://github.com/excelano/vier-ios), with the same rules, the same opponent and the same look. Nothing passes between the two.
+It is the desktop sibling of [Vier for iPhone and Apple Watch](https://github.com/anderix/vier-ios), with the same rules, the same opponent and the same look. Nothing passes between the two.
 
 ## Install
 
