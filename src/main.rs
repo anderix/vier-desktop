@@ -388,11 +388,17 @@ fn turn_indicator(ui: &mut egui::Ui, game: &Game) {
 }
 
 fn state_path() -> Option<PathBuf> {
-    let base = std::env::var_os("XDG_STATE_HOME")
+    let base = if cfg!(windows) {
+        std::env::var_os("LOCALAPPDATA").map(PathBuf::from)
+    } else {
+        unix_state_home()
+    }?;
+    Some(base.join(APP_ID).join("state.json"))
+}
+
+fn unix_state_home() -> Option<PathBuf> {
+    std::env::var_os("XDG_STATE_HOME")
         .map(PathBuf::from)
         .filter(|path| path.is_absolute())
-        .or_else(|| {
-            std::env::var_os("HOME").map(|home| PathBuf::from(home).join(".local/state"))
-        })?;
-    Some(base.join(APP_ID).join("state.json"))
+        .or_else(|| std::env::var_os("HOME").map(|home| PathBuf::from(home).join(".local/state")))
 }
