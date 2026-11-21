@@ -12,7 +12,9 @@ On Debian and Ubuntu (amd64), from the Excelano apt repository:
 curl -fsSL https://excelano.com/apt/setup.sh | sudo sh && sudo apt install vier
 ```
 
-That installs the game and a launcher named Vier. On a Mac or Windows, build it from source as below.
+That installs the game and a launcher named Vier.
+
+On Windows, download `vier-x86_64-pc-windows-msvc.zip` from the [latest release](https://github.com/anderix/vier-desktop/releases/latest), unzip it, and run `vier.exe`. The program is not signed, so Windows may first warn that it comes from an unknown publisher. On a Mac, build it from source as below.
 
 ## Playing
 
