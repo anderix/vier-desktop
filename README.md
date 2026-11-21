@@ -1,6 +1,6 @@
 # Vier
 
-Vier is four in a row for the Linux desktop: drop red discs into a seven-by-six board against yellow, and line up four across, down or diagonally first. The opponent is the computer, or a second person at the same keyboard. Vier has no account, no network, no ads and no analytics. It picks up the game in progress where it was left, and has an Easy level built for beginners.
+Vier is four in a row for the desktop: drop red discs into a seven-by-six board against yellow, and line up four across, down or diagonally first. The opponent is the computer, or a second person at the same keyboard. Vier has no account, no network, no ads and no analytics. It picks up the game in progress where it was left, and has an Easy level built for beginners.
 
 It is the desktop sibling of [Vier for iPhone and Apple Watch](https://github.com/anderix/vier-ios), with the same rules, the same opponent and the same look. Nothing passes between the two.
 
@@ -12,7 +12,7 @@ On Debian and Ubuntu (amd64), from the Excelano apt repository:
 curl -fsSL https://excelano.com/apt/setup.sh | sudo sh && sudo apt install vier
 ```
 
-That installs the game and a launcher named Vier.
+That installs the game and a launcher named Vier. On a Mac or Windows, build it from source as below.
 
 ## Playing
 
@@ -22,6 +22,6 @@ Easy, Medium and Hard set how far ahead the computer looks and how often it play
 
 ## Building
 
-`cargo build --release` builds the window, and `cargo test` runs the rules and opponent tests, which need no display. `cargo deb` builds the package. `packaging/linux/check-libraries.sh` runs the release build under Wayland and X11 and refuses if a library it opens is not reachable from the package's `depends`, since the display stack is opened by name at run time and the linker never sees it.
+`cargo run` builds the game and starts it, on Linux, macOS and Windows alike, with Rust from [rustup.rs](https://rustup.rs). `cargo build --release` builds an optimized program, and `cargo test` runs the rules and opponent tests, which need no display. `cargo deb` builds the Debian package. `packaging/linux/check-libraries.sh` runs the release build under Wayland and X11 and refuses if a library it opens is not reachable from the package's `depends`, since the display stack is opened by name at run time and the linker never sees it.
 
-The game keeps its state in `$XDG_STATE_HOME/vier/state.json`, which is `~/.local/state/vier/state.json` by default: the chosen difficulty, whether one or two players are at the board, who moves first next, and the game in progress.
+The game keeps its state in `$XDG_STATE_HOME/vier/state.json`, which is `~/.local/state/vier/state.json` by default, on Linux and macOS, and in `%LOCALAPPDATA%\vier\state.json` on Windows: the chosen difficulty, whether one or two players are at the board, who moves first next, and the game in progress.
